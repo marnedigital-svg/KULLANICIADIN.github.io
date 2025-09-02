@@ -5,15 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>İlk Sitem</title>
   <style>
-    body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:#f7f7fb; font-family:Arial, sans-serif; }
-    h1 { font-size:32px; line-height:1.4; text-align:center; color:#222; padding:16px; }
-    small { display:block; margin-top:8px; color:#666; text-align:center; }
+    :root { --bg:#f7f7fb; --txt:#222; --muted:#666; --btn:#25d366; --btn-hover:#1ebe57; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:var(--bg); font-family:Arial, sans-serif; color:var(--txt); }
+    main { text-align:center; padding:24px; }
+    h1 { font-size:32px; line-height:1.35; margin:0 0 12px; }
+    small { display:block; margin-top:6px; color:var(--muted); }
+    .cta {
+      margin-top:20px;
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 18px; border-radius:10px; border:none;
+      background:var(--btn); color:#fff; font-size:16px; cursor:pointer;
+      text-decoration:none; transition:transform .06s ease, background .15s ease;
+    }
+    .cta:hover { background:var(--btn-hover); transform:translateY(-1px); }
+    .icon { width:20px; height:20px; display:inline-block; }
   </style>
 </head>
 <body>
   <main>
     <h1>Salam ay Tehran qaqan — ilk sitesini qurub olaraq</h1>
     <small>Bu sayfa GitHub Pages ile yayınlanıyor.</small>
+
+    <!-- WhatsApp Butonu -->
+    <a class="cta" href="https://wa.me/9949971998" target="_blank" rel="noopener">
+      <!-- Basit bir WhatsApp simgesi (SVG) -->
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.11.55 4.17 1.59 6L0 24l6.2-1.63a12.02 12.02 0 0 0 5.85 1.49h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.5-8.42ZM12.06 22.1h-.01a9.96 9.96 0 0 1-5.08-1.4l-.36-.21-3.68.96.98-3.58-.24-.37A10.06 10.06 0 0 1 2.1 11.96C2.1 6.47 6.57 2 12.06 2c2.66 0 5.16 1.04 7.04 2.92a9.9 9.9 0 0 1 2.92 7.04c0 5.49-4.47 10.14-10 10.14Zm5.76-7.49c-.31-.16-1.82-.9-2.1-1- .28-.1-.48-.16-.68.16-.2.31-.78 1-.96 1.2-.18.21-.36.23-.67.08-.31-.16-1.33-.49-2.53-1.56a9.4 9.4 0 0 1-1.74-2.16c-.18-.31 0-.48.14-.64.14-.14.31-.36.47-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.67-1.63-.92-2.23-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.39-.28.31-1.06 1.03-1.06 2.5 0 1.47 1.08 2.89 1.23 3.09.16.21 2.13 3.26 5.17 4.57.72.31 1.28.49 1.72.63.72.23 1.37.2 1.88.12.57-.08 1.82-.74 2.08-1.45.26-.72.26-1.33.18-1.45-.08-.12-.28-.2-.59-.36Z"/>
+      </svg>
+      WhatsApp ile yaz (994 99 719 98)
+    </a>
   </main>
+
+  <!-- İstersen butonu JS ile de açabilirsin:
+  <script>
+    function acWhatsApp(){
+      window.open('https://wa.me/9949971998','_blank','noopener');
+    }
+  </script>
+  -->
 </body>
 </html>
